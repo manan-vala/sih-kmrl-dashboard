@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Card,
   CardHeader,
@@ -11,12 +11,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import {
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-  TooltipProvider,
-} from "@/components/ui/tooltip";
+// import {
+//   Tooltip,
+//   TooltipTrigger,
+//   TooltipContent,
+//   TooltipProvider,
+// } from "@/components/ui/tooltip";
 import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -29,7 +29,7 @@ import {
   Play,
   RefreshCcw,
   ShieldCheck,
-  TrafficCone,
+  // TrafficCone,
   Upload,
   Zap,
   BarChart3,
@@ -38,7 +38,7 @@ import {
   ListOrdered,
   Wrench,
   Image as ImageIcon,
-  Info,
+  // Info,
 } from "lucide-react";
 import {
   LineChart,
@@ -200,7 +200,8 @@ const defaultWeights: Weights = {
 // -------------------------------------------------------------
 
 export default function KMRLDashboard() {
-  const [trains, setTrains] = useState<Trainset[]>(seed);
+  // const [trains, setTrains] = useState<Trainset[]>(seed);
+  const [trains] = useState<Trainset[]>(seed);
   const [weights, setWeights] = useState<Weights>(defaultWeights);
   const [nightMode, setNightMode] = useState(true);
   const [serviceDemand, setServiceDemand] = useState(18); // how many rakes at dawn
@@ -481,7 +482,7 @@ export default function KMRLDashboard() {
                       </tr>
                     </thead>
                     <tbody>
-                      {ranked.map((r, idx) => {
+                      {ranked.map((r) => {
                         const minDays = Math.min(
                           daysLeft(r.fitness.rollingStockValidTill),
                           daysLeft(r.fitness.signallingValidTill),
