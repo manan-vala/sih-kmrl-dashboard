@@ -314,7 +314,10 @@ export default function KMRLDashboard() {
       <div className="min-h-screen bg-background text-foreground">
         <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3">
-            <TrafficCone className="h-5 w-5" />
+            {/* <TrafficCone className="h-5 w-5" /> */}
+            <div className="h-5 w-10 flex items-center justify-center">
+              <img src="/icon.png" alt="" />
+            </div>
             <h1 className="text-lg font-semibold">
               KMRL – AI Induction Planner
             </h1>
