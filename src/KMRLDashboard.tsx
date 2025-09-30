@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import MapBox from "./MapBox";
 import {
   Card,
   CardHeader,
@@ -38,6 +39,7 @@ import {
   ListOrdered,
   Wrench,
   Image as ImageIcon,
+  MapIcon,
   // Info,
 } from "lucide-react";
 import {
@@ -873,6 +875,20 @@ export default function KMRLDashboard() {
                   </div>
                 </TabsContent>
               </Tabs>
+            </CardContent>
+          </Card>
+
+          <Card className="mt-6 shadow-sm">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <MapIcon className="h-5 w-5" /> Train Map
+              </CardTitle>
+              {/* <CardDescription>
+                Bring siloed data into a single source of truth.
+              </CardDescription> */}
+            </CardHeader>
+            <CardContent className="min-h-[400px]">
+              <MapBox />
             </CardContent>
           </Card>
 
